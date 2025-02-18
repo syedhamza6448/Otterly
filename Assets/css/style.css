@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Titillium Web", sans-serif;
+}
+
+:root {
+    --primary: #2a6970;
+    --secondary: #e6d5b8;
+    --details: #4e3b31;
+}
+
+body {
+    min-height: 200vh;
+}
