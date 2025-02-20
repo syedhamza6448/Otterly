@@ -12,5 +12,357 @@
 }
 
 body {
-    min-height: 200vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.hero {
+    background-color: var(--primary);
+    background-size: cover;
+    background-position: center;
+    color: var(--secondary);
+    height: fit-content;
+    width: 100vw;
+}
+
+.mycontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 100px;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+}
+
+.hero-product h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    margin-bottom: 50px;
+}
+
+.hero-product h4 {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+}
+
+.pcs {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    margin-top: 50px;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.pcs-sub {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pcs-sub p {
+    font-size: 1.2rem;
+}
+
+.size-options,
+.color-options {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+.color-option.active {
+    box-shadow: 0 0 0 2px var(--secondary);
+}
+
+.size-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary);
+    color: var(--details);
+    font-weight: 600;
+    border: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.size-option.active {
+    background-color: var(--details);
+    color: var(--secondary);
+    transition: all 0.5s ease-in-out;
+}
+
+.more-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.more-buttons a {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.more-buttons .getnow {
+    width: 200px;
+    height: 50px;
+    background-color: var(--secondary);
+    color: var(--details);
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+.more-buttons .getnow:hover {
+    background-color: var(--details);
+    color: var(--secondary);
+    transform: translateY(-10px);
+}
+
+.more-buttons .explore {
+    width: 200px;
+    height: 50px;
+    background-color: var(--details);
+    color: var(--secondary);
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+.more-buttons .explore:hover {
+    background-color: var(--secondary);
+    color: var(--details);
+    transform: translateY(-10px);
+}
+
+.product-image {
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    overflow: hidden;
+    margin-top: 100px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    position: relative;
+    margin-left: 50px;
+}
+
+.product-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.product-image img.active {
+    opacity: 1;
+}
+
+.timer-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.animate-text {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+.hero-product h1 {
+    animation-delay: 0.5s;
+}
+
+.hero-product h4 {
+    animation-delay: 1s;
+}
+
+.pcs {
+    animation-delay: 1.5s;
+}
+
+.more-buttons {
+    animation-delay: 2s;
+}
+
+.product-image {
+    position: relative;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: dropIn 0.5s ease-out forwards;
+    animation-delay: 2.5s;
+}
+.mobile-intro {
+    display: none;
+}
+
+
+@media (max-width: 1000px) {
+    .hero {
+        padding: 20px;
+        background: url(../images/otter-bg.png);
+    }
+
+    .mycontainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .hero-product {
+        width: 100%;
+        padding: 0;
+    }
+
+    .product-image {
+        display: none;
+    }
+
+    .hero-product h1 {
+        font-size: 3em;
+        text-align: center;
+        display: none;
+    }
+    
+    .hero-product h4 {
+        text-align: center;
+        font-size: 2em;
+        display: none;
+    }
+
+    .pcs {
+        display: none;
+    }
+    .mobile-intro {
+        background-color: #2a6970a1;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .mobile-intro h1 {
+        font-size: 3em;
+        text-align: center;
+        display: block;
+    }
+    .mobile-intro h4 {
+        text-align: center;
+        font-size: 1em;
+        padding: 10px 0;
+        border-radius: 10px;
+        display: block;
+    }
+    .mobile-intro p {
+        text-align: center;
+        font-size: 1.1em;
+    }
+    .more-buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        margin-top: -50px;
+    }
+    .getnow {
+        display: none;
+    }
+    .getnow-link {
+        display: none;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

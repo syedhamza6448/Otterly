@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Playfair Display -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
     <!-- Titillium Web -->
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <!-- Own CSS -->
     <link rel="stylesheet" href="Assets/css/style.css">
     <link rel="stylesheet" href="Assets/css/navbar.css">
     <link rel="icon" href="Assets/images/otter logo.png">
 </head>
+
 <body>
     <header>
         <nav class="desktop-nav">
@@ -40,8 +47,8 @@
                 <a href="index.html">OTTERLY<sup>&trade;</sup></a>
             </div>
             <ul class="cart-login">
-                <li><a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i></a></li>
-                <li><a href="login.html" class="login-signup">Login/Sign Up</a></li>
+                <li><a href="cart.html" class="cart-icon"><i class="bi bi-bag"></i></a></li>
+                <li><a href="user.html" class="login-signup">Login/Sign Up</a></li>
             </ul>
         </nav>
         <nav class="mobile-nav">
@@ -51,7 +58,7 @@
                     <a href="index.html">OTTERLY<sup>&trade;</sup></a>
                 </div>
                 <ul class="cart-login">
-                    <li><a href="login.html" class="login-signup">Login/Sign Up</a></li>
+                    <li><a href="user.html" class="login-signup"><i class="bi bi-person"></i></a></li>
                     <li class="hamburger-menu">
                         <div class="hamburger-bar"></div>
                         <div class="hamburger-bar"></div>
@@ -78,7 +85,57 @@
             </ul>
         </nav>
     </header>
+    <section class="hero">
+        <div class="mycontainer">
+            <div class="hero-product">
+                <div class="mobile-intro">
+                    <h1 class="animate-text">Welcome to Otterly</h1>
+                    <p class="animate-text">Streetwear with attitude. Style that <strong>flows</strong>. At <strong>Otterly Fierce</strong>, we don’t follow trends—we create them. Inspired by the <strong>raw energy</strong> of the streets and the <strong>effortless confidence</strong> of an otter, our pieces are made for those who move different.</p>
+                    <p class="animate-text">From <strong>bold graphics</strong> to <strong>premium cuts</strong>, we bring you fashion that’s <strong>clean, fearless</strong>, and <strong>always on point</strong>. No rules. No limits. Just pure <strong>Otterly Fierce</strong> energy.</p>
+                    <h4 class="animate-text">⚡ Stay fresh. Stay fierce. Own your flow. ⚡</h4>
+                </div>
+                <h1 class="animate-text">Otter Inferno</h1>
+                <h4 class="animate-text">Unleash the Dragon, Otterly Bold! 🐉🔥</h4>
+                <div class="pcs animate-text">
+                    <div class="price pcs-sub">
+                        <p style="font-weight: 400;">Price:</p>
+                        <p>$60.00</p>
+                    </div>
+                    <div class="color pcs-sub">
+                        <p>Colors:</p>
+                        <div class="color-options">
+                            <button class="color-option active" data-color="cyan" style="background-color: #80faf8;"
+                                aria-label="Select Cyan color"></button>
+                            <button class="color-option" data-color="orange" style="background-color: #feb284;"
+                                aria-label="Select Orange color"></button>
+                            <button class="color-option" data-color="red" style="background-color: #fd8183;"
+                                aria-label="Select Red color"></button>
+                        </div>
+                    </div>
+                    <div class="size pcs-sub">
+                        <p>Size:</p>
+                        <div class="size-options">
+                            <button class="size-option" data-size="S">S</button>
+                            <button class="size-option active" data-size="M">M</button>
+                            <button class="size-option" data-size="L">L</button>
+                            <button class="size-option" data-size="XL">XL</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-buttons animate-text">
+                    <a class="getnow-link" href="productlink"><button class="getnow">Get Yours Now!</button></a>
+                    <a href="shop.html"><button class="explore">Explore More</button></a>
+                </div>
+            </div>
+            <div class="product-image">
+                <img src="Assets/images/otter-cyan-hero.png" alt="Otter Cyan" class="active">
+                <img src="Assets/images/otter-orange-hero.png" alt="Otter Orange">
+                <img src="Assets/images/otter-red-hero.png" alt="Otter Red">
+            </div>
+        </div>
+    </section>
     <script src="Assets/js/script.js"></script>
     <script src="Assets/js/navbar.js"></script>
 </body>
+
 </html>

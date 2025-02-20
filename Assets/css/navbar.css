@@ -23,6 +23,7 @@
     width: 100vw;
     height: 15vh;
     transition: all 0.3s ease;
+    z-index: 1000;
   }
   
   header.scrolled {
@@ -170,6 +171,7 @@
     display: none;
     flex-direction: column;
     width: 100%;
+    background-color: var(--details);
   }
   
   .mobile-nav-top {
@@ -202,6 +204,11 @@
     display: flex;
     align-items: center;
     gap: 20px;
+  }
+  .mobile-nav .login-signup {
+    background-color: var(--details);
+    color: var(--secondary);
+    font-size: 1.5em;
   }
   
   .hamburger-menu {
@@ -339,6 +346,17 @@
       left: 0;
       border-radius: 0;
     }
+    .mobile-nav .shop-arrow {
+      margin-left: 10px;
+      font-size: 1.5em;
+    }
   }
   
-  
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: #2a6970;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #e6d5b8;
+    border-radius: 10px;
+  }
