@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Titillium Web", sans-serif;
-    user-select: none;
 }
 
 :root {
@@ -13,9 +12,15 @@
     --alert: #FF6B6B;
 }
 
+*::selection {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
 body {
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background-color: var(--secondary);
 }
 
 .hero {
@@ -257,7 +262,7 @@ body {
 }
 
 /* New Arrival */
-section.new {
+section.products-display {
     width: 100vw;
     height: fit-content;
     padding: 40px;
@@ -268,7 +273,7 @@ section.new {
     background-color: var(--secondary);
 }
 
-section.new h1 {
+section.products-display h1 {
     font-size: 3em;
     font-family: "Playfair Display", serif;
     display: flex;
@@ -277,7 +282,7 @@ section.new h1 {
     color: var(--primary);
 }
 
-section.new h1::before {
+section.products-display h1::before {
     content: "";
     display: block;
     width: 10%;
@@ -289,7 +294,7 @@ section.new h1::before {
     border-radius: 10px;
 }
 
-section.new h1::after {
+section.products-display h1::after {
     content: "";
     display: block;
     width: 10%;
@@ -301,7 +306,7 @@ section.new h1::after {
     border-radius: 10px;
 }
 
-section.new h2 {
+section.products-display h2 {
     font-size: 1.5em;
     font-weight: 500;
     margin-top: 10px;
@@ -309,7 +314,7 @@ section.new h2 {
     position: relative;
 }
 
-section.new .products {
+section.products-display .products {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -532,6 +537,101 @@ section.new .products {
     color: #ff6b6b;
 }
 
+/* Shoes Promo */
+.about-shoes {
+    width: 100vw;
+    height: fit-content;
+    padding: 40px;
+}
+
+.about-shoes .mycontainer {
+    position: relative;
+    width: 100%;
+}
+
+.about-shoes .mycontainer .promo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    gap: 100px;
+    background: var(--details);
+    height: 500px;
+    border-radius: 50px 10px 50px 10px;
+}
+
+.promo .promo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+.promo-text h1 {
+    position: absolute;
+    left: 20%;
+    top: -50px;
+    color: var(--secondary);
+    z-index: 1;
+    opacity: 0.1;
+    font-size: 5em;
+    font-family: "Playfair Display", serif;
+}
+
+.promo-text h2 {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: var(--secondary);
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    z-index: 2;
+    font-weight: 600;
+}
+
+.promo-text p {
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+    color: var(--primary);
+}
+
+.promo-text a {
+    font-size: 1.5em;
+    color: var(--secondary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+
+.promo-text a:hover {
+    background-color: var(--secondary);
+    color: var(--details);
+}
+
+.promo .promo-img {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.promo-img img {
+    height: 150%;
+    width: 110%;
+}
+section.popular h1::before {
+    left: 25%;
+}
+section.popular h1::after {
+    right: 25%;
+}
+
 @media (max-width: 1000px) {
     .hero {
         padding: 20px;
@@ -617,8 +717,8 @@ section.new .products {
         display: none;
     }
 
-    section.new h1::before,
-    section.new h1::after {
+    section.products-display h1::before,
+    section.products-display h1::after {
         display: none;
     }
 
@@ -629,6 +729,39 @@ section.new .products {
 
     .overlay a {
         display: flex;
+    }
+
+    .about-shoes .mycontainer .promo {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        height: fit-content;
+        gap: 20px;
+        border-radius: 0;
+    }
+    .promo-img {
+        border-radius: 5px;
+    }
+    .promo-text {
+        gap: 50px;
+    }
+    .promo-text h1 {
+        opacity: 0.1;
+        left: 8%;
+        top: 1%;
+    }
+    .promo-text a {
+        background-color: var(--secondary);
+        color: var(--details);
+        padding: 0 10px;
+        border-radius: 5px;
+    }
+    .promo-text p {
+        background-color: var(--primary);
+        color: var(--secondary);
+        padding: 0 10px;
+        border-radius: 5px;
     }
 }
 

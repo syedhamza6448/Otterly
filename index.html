@@ -103,8 +103,13 @@
             <div class="hero-product">
                 <div class="mobile-intro">
                     <h1 class="animate-text">Welcome to Otterly</h1>
-                    <p class="animate-text">Streetwear with attitude. Style that <strong>flows</strong>. At <strong>Otterly Fierce</strong>, we don't follow trends—we create them. Inspired by the <strong>raw energy</strong> of the streets and the <strong>effortless confidence</strong> of an otter, our pieces are made for those who move different.</p>
-                    <p class="animate-text">From <strong>bold graphics</strong> to <strong>premium cuts</strong>, we bring you fashion that's <strong>clean, fearless</strong>, and <strong>always on point</strong>. No rules. No limits. Just pure <strong>Otterly Fierce</strong> energy.</p>
+                    <p class="animate-text">Streetwear with attitude. Style that <strong>flows</strong>. At
+                        <strong>Otterly Fierce</strong>, we don't follow trends—we create them. Inspired by the
+                        <strong>raw energy</strong> of the streets and the <strong>effortless confidence</strong> of an
+                        otter, our pieces are made for those who move different.</p>
+                    <p class="animate-text">From <strong>bold graphics</strong> to <strong>premium cuts</strong>, we
+                        bring you fashion that's <strong>clean, fearless</strong>, and <strong>always on point</strong>.
+                        No rules. No limits. Just pure <strong>Otterly Fierce</strong> energy.</p>
                     <h4 class="animate-text">⚡ Stay fresh. Stay fierce. Own your flow. ⚡</h4>
                 </div>
                 <h1 class="animate-text">Otter Inferno</h1>
@@ -147,9 +152,9 @@
             </div>
         </div>
     </section>
-    <section class="new">
+    <section class="new products-display">
         <h1>New Arrivals</h1>
-        <h2>Here is our new arrival products that you may like.</h2>
+        <h2>Here are our new arrival products that you may like.</h2>
         <div class="products">
             <script>
                 pCards = [
@@ -183,9 +188,89 @@
                     },
                 ]
                 pCards.forEach(pCards => {
-                    document.write (
+                    document.write(
                         `
-                        <div class="product-card">
+                        <div data-aos="zoom-out-down" data-aos-duration="2000" data-aos-offset="200" class="product-card">
+                            <div class="img-container">
+                                <img src="Assets/images/products/${pCards.pImg}" alt="${pCards.name}">
+                                <div class="wishlist-icon">
+                                    <i class="bi bi-suit-heart" data-tooltip="Add to Wishlist" data-product-id="${pCards.id}"></i>
+                                </div>
+                                <div class="overlay">
+                                    <div class="quick-buttons">
+                                        <i class="bi bi-eye" data-tooltip="Quick View"></i>
+                                        <i class="bi bi-suit-heart" data-tooltip="Add to Wishlist" data-product-id="${pCards.id}"></i>
+                                        <i class="bi bi-bag" data-tooltip="Add to Cart" data-product-id="${pCards.id}"></i>
+                                    </div>
+                                    <a href="productlink"><button>View Product</button></a>
+                                </div>
+                            </div>
+                            <h3>${pCards.name}</h3>
+                            <div class="product-price">
+                                <p class="n-price">$${pCards.newPrice}</p>
+                                <p class="o-price">$${pCards.oldPrice}</p>
+                            </div>
+                        </div>
+                        `
+                    )
+                });
+            </script>
+        </div>
+    </section>
+    <section class="about-shoes">
+        <div class="mycontainer">
+            <div data-aos="flip-up" data-aos-duration="2000" data-aos-offset="200" class="promo">
+                <div class="promo-text">
+                    <h1>Otterly</h1>
+                    <h2>Streetwear Sneakers</h2>
+                    <p>Fashion that Flows with You!</p>
+                    <a href="shop.html">Shop Now</a>
+                </div>
+                <div class="promo-img">
+                    <img src="Assets/images/about-shoes.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="popular products-display">
+        <h1>Popular Products</h1>
+        <h2>Here are our new popular products that you may like.</h2>
+        <div class="products">
+            <script>
+                pCards = [
+                    {
+                        name: "Oversized Hoodie",
+                        pImg: "product-1.png",
+                        oldPrice: "60.00",
+                        newPrice: "39.99",
+                        id: "1"
+                    },
+                    {
+                        name: "Streetwear Shoes",
+                        pImg: "product-2.png",
+                        oldPrice: "75.00",
+                        newPrice: "51.50",
+                        id: "2"
+                    },
+                    {
+                        name: "Silver Cross Pendant",
+                        pImg: "product-3.png",
+                        oldPrice: "20.00",
+                        newPrice: "12.99",
+                        id: "3"
+                    },
+                    {
+                        name: "Varsity Jacket",
+                        pImg: "product-4.png",
+                        oldPrice: "80.00",
+                        newPrice: "54.99",
+                        id: "4"
+                    },
+                ]
+                pCards.forEach(pCards => {
+                    document.write(
+                        `
+                        <div data-aos="zoom-out-down" data-aos-duration="2000" data-aos-offset="200" class="product-card">
                             <div class="img-container">
                                 <img src="Assets/images/products/${pCards.pImg}" alt="${pCards.name}">
                                 <div class="wishlist-icon">
@@ -223,4 +308,3 @@
 </body>
 
 </html>
-
