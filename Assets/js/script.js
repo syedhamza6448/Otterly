@@ -180,6 +180,28 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize counts
   updateCounts(wishlistCounts, wishlistItems)
   updateCounts(cartCounts, cartItems)
+
+  const popularProductsContainer = document.querySelector('.popular .products');
+  const filterButtons = document.querySelectorAll('.popular-filter ul li');
+  const popularProducts = Array.from(popularProductsContainer.children);
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const category = button.getAttribute('data-category');
+      
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      popularProducts.forEach(product => {
+        const productCategory = product.getAttribute('data-category');
+        if (category === 'All' || category === productCategory) {
+          product.style.display = 'flex';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    });
+  });
 })
 
 

@@ -106,7 +106,8 @@
                     <p class="animate-text">Streetwear with attitude. Style that <strong>flows</strong>. At
                         <strong>Otterly Fierce</strong>, we don't follow trends—we create them. Inspired by the
                         <strong>raw energy</strong> of the streets and the <strong>effortless confidence</strong> of an
-                        otter, our pieces are made for those who move different.</p>
+                        otter, our pieces are made for those who move different.
+                    </p>
                     <p class="animate-text">From <strong>bold graphics</strong> to <strong>premium cuts</strong>, we
                         bring you fashion that's <strong>clean, fearless</strong>, and <strong>always on point</strong>.
                         No rules. No limits. Just pure <strong>Otterly Fierce</strong> energy.</p>
@@ -163,28 +164,32 @@
                         pImg: "product-1.png",
                         oldPrice: "60.00",
                         newPrice: "39.99",
-                        id: "1"
+                        id: "1",
+                        category: "Tops",
                     },
                     {
                         name: "Streetwear Shoes",
                         pImg: "product-2.png",
                         oldPrice: "75.00",
                         newPrice: "51.50",
-                        id: "2"
+                        id: "2",
+                        category: "Shoes",
                     },
                     {
                         name: "Silver Cross Pendant",
                         pImg: "product-3.png",
                         oldPrice: "20.00",
                         newPrice: "12.99",
-                        id: "3"
+                        id: "3",
+                        category: "Jewelry",
                     },
                     {
                         name: "Varsity Jacket",
                         pImg: "product-4.png",
                         oldPrice: "80.00",
                         newPrice: "54.99",
-                        id: "4"
+                        id: "4",
+                        category: "Tops",
                     },
                 ]
                 pCards.forEach(pCards => {
@@ -235,42 +240,88 @@
     <section class="popular products-display">
         <h1>Popular Products</h1>
         <h2>Here are our new popular products that you may like.</h2>
+        <div class="popular-filter">
+            <ul>
+                <li class="active" data-category="All">All Products</li>
+                <li data-category="Tops">Tops</li>
+                <li data-category="Bottoms">Bottoms</li>
+                <li data-category="Shoes">Shoes</li>
+                <li data-category="Plushies">Plushies</li>
+                <li data-category="Jewelry">Jewelry</li>
+            </ul>
+        </div>
         <div class="products">
             <script>
                 pCards = [
                     {
-                        name: "Oversized Hoodie",
-                        pImg: "product-1.png",
+                        name: "Tokyo Hoodie",
+                        pImg: "product-5.png",
                         oldPrice: "60.00",
                         newPrice: "39.99",
-                        id: "1"
+                        id: "5",
+                        category: "Tops",
                     },
                     {
-                        name: "Streetwear Shoes",
-                        pImg: "product-2.png",
+                        name: "Cargo Pants",
+                        pImg: "product-6.png",
                         oldPrice: "75.00",
                         newPrice: "51.50",
-                        id: "2"
+                        id: "6",
+                        category: "Bottoms",
                     },
                     {
-                        name: "Silver Cross Pendant",
-                        pImg: "product-3.png",
-                        oldPrice: "20.00",
-                        newPrice: "12.99",
-                        id: "3"
+                        name: "Graphic Sweatshirt",
+                        pImg: "product-7.png",
+                        oldPrice: "46.00",
+                        newPrice: "27.99",
+                        id: "7",
+                        category: "Tops",
                     },
                     {
-                        name: "Varsity Jacket",
-                        pImg: "product-4.png",
+                        name: "Nike Air Shoes",
+                        pImg: "product-8.png",
                         oldPrice: "80.00",
                         newPrice: "54.99",
-                        id: "4"
+                        id: "8",
+                        category: "Shoes",
+                    },
+                    {
+                        name: "Otter Cream Plushie",
+                        pImg: "product-9.png",
+                        oldPrice: "15.00",
+                        newPrice: "7.79",
+                        id: "9",
+                        category: "Plushies",
+                    },
+                    {
+                        name: "Twisted Smiley Necklace",
+                        pImg: "product-10.png",
+                        oldPrice: "18.00",
+                        newPrice: "10.89",
+                        id: "10",
+                        category: "Jewelry",
+                    },
+                    {
+                        name: "Drop Shoulder Tee",
+                        pImg: "product-11.png",
+                        oldPrice: "34.50",
+                        newPrice: "24.99",
+                        id: "11",
+                        category: "Tops",
+                    },
+                    {
+                        name: "Otter Brown Plushie",
+                        pImg: "product-12.png",
+                        oldPrice: "20.79",
+                        newPrice: "12.99",
+                        id: "12",
+                        category: "Plushies",
                     },
                 ]
                 pCards.forEach(pCards => {
                     document.write(
                         `
-                        <div data-aos="zoom-out-down" data-aos-duration="2000" data-aos-offset="200" class="product-card">
+                        <div data-aos="zoom-out-down" data-aos-duration="2000" data-aos-offset="200" class="product-card" data-category="${pCards.category}">
                             <div class="img-container">
                                 <img src="Assets/images/products/${pCards.pImg}" alt="${pCards.name}">
                                 <div class="wishlist-icon">

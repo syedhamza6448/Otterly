@@ -318,7 +318,7 @@ section.products-display .products {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     gap: 40px;
     margin-top: 50px;
@@ -625,11 +625,46 @@ section.products-display .products {
     height: 150%;
     width: 110%;
 }
+section.popular h1{
+    text-align: center;
+}
 section.popular h1::before {
     left: 25%;
 }
 section.popular h1::after {
     right: 25%;
+}
+.popular-filter {
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.popular-filter ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+.popular-filter ul li {
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.4em;
+    transition: all 0.5s ease-in-out;
+}
+.popular-filter ul li:hover {
+    opacity: 0.5;
+}
+.popular-filter ul li.active {
+    color: var(--primary);
+    font-weight: 600;
+}
+script {
+    display: none;
 }
 
 @media (max-width: 1000px) {
@@ -762,6 +797,14 @@ section.popular h1::after {
         color: var(--secondary);
         padding: 0 10px;
         border-radius: 5px;
+    }
+    .popular-filter ul {
+        flex-wrap: wrap;
+    }
+    .popular-filter ul li {
+        width: 40%;
+        text-align: center;
+        font-size: 1em;
     }
 }
 
