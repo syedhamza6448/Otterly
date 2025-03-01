@@ -24,6 +24,7 @@
     <!-- Own CSS -->
     <link rel="stylesheet" href="Assets/css/style.css">
     <link rel="stylesheet" href="Assets/css/navbar.css">
+    <link rel="stylesheet" href="Assets/css/footer.css">
     <link rel="icon" href="Assets/images/otter logo.png">
 </head>
 
@@ -156,71 +157,7 @@
     <section class="new products-display">
         <h1>New Arrivals</h1>
         <h2>Here are our new arrival products that you may like.</h2>
-        <div class="products">
-            <script>
-                pCards = [
-                    {
-                        name: "Oversized Hoodie",
-                        pImg: "product-1.png",
-                        oldPrice: "60.00",
-                        newPrice: "39.99",
-                        id: "1",
-                        category: "Tops",
-                    },
-                    {
-                        name: "Streetwear Shoes",
-                        pImg: "product-2.png",
-                        oldPrice: "75.00",
-                        newPrice: "51.50",
-                        id: "2",
-                        category: "Shoes",
-                    },
-                    {
-                        name: "Silver Cross Pendant",
-                        pImg: "product-3.png",
-                        oldPrice: "20.00",
-                        newPrice: "12.99",
-                        id: "3",
-                        category: "Jewelry",
-                    },
-                    {
-                        name: "Varsity Jacket",
-                        pImg: "product-4.png",
-                        oldPrice: "80.00",
-                        newPrice: "54.99",
-                        id: "4",
-                        category: "Tops",
-                    },
-                ]
-                pCards.forEach(pCards => {
-                    document.write(
-                        `
-                        <div data-aos="zoom-out-down" data-aos-duration="2000" data-aos-offset="200" class="product-card">
-                            <div class="img-container">
-                                <img src="Assets/images/products/${pCards.pImg}" alt="${pCards.name}">
-                                <div class="wishlist-icon">
-                                    <i class="bi bi-suit-heart" data-tooltip="Add to Wishlist" data-product-id="${pCards.id}"></i>
-                                </div>
-                                <div class="overlay">
-                                    <div class="quick-buttons">
-                                        <i class="bi bi-eye" data-tooltip="Quick View"></i>
-                                        <i class="bi bi-suit-heart" data-tooltip="Add to Wishlist" data-product-id="${pCards.id}"></i>
-                                        <i class="bi bi-bag" data-tooltip="Add to Cart" data-product-id="${pCards.id}"></i>
-                                    </div>
-                                    <a href="productlink"><button>View Product</button></a>
-                                </div>
-                            </div>
-                            <h3>${pCards.name}</h3>
-                            <div class="product-price">
-                                <p class="n-price">$${pCards.newPrice}</p>
-                                <p class="o-price">$${pCards.oldPrice}</p>
-                            </div>
-                        </div>
-                        `
-                    )
-                });
-            </script>
-        </div>
+        <div class="products"></div>
     </section>
     <section class="about-shoes">
         <div class="mycontainer">
@@ -250,105 +187,81 @@
                 <li data-category="Jewelry">Jewelry</li>
             </ul>
         </div>
-        <div class="products">
-            <script>
-                pCards = [
-                    {
-                        name: "Tokyo Hoodie",
-                        pImg: "product-5.png",
-                        oldPrice: "60.00",
-                        newPrice: "39.99",
-                        id: "5",
-                        category: "Tops",
-                    },
-                    {
-                        name: "Cargo Pants",
-                        pImg: "product-6.png",
-                        oldPrice: "75.00",
-                        newPrice: "51.50",
-                        id: "6",
-                        category: "Bottoms",
-                    },
-                    {
-                        name: "Graphic Sweatshirt",
-                        pImg: "product-7.png",
-                        oldPrice: "46.00",
-                        newPrice: "27.99",
-                        id: "7",
-                        category: "Tops",
-                    },
-                    {
-                        name: "Nike Air Shoes",
-                        pImg: "product-8.png",
-                        oldPrice: "80.00",
-                        newPrice: "54.99",
-                        id: "8",
-                        category: "Shoes",
-                    },
-                    {
-                        name: "Otter Cream Plushie",
-                        pImg: "product-9.png",
-                        oldPrice: "15.00",
-                        newPrice: "7.79",
-                        id: "9",
-                        category: "Plushies",
-                    },
-                    {
-                        name: "Twisted Smiley Necklace",
-                        pImg: "product-10.png",
-                        oldPrice: "18.00",
-                        newPrice: "10.89",
-                        id: "10",
-                        category: "Jewelry",
-                    },
-                    {
-                        name: "Drop Shoulder Tee",
-                        pImg: "product-11.png",
-                        oldPrice: "34.50",
-                        newPrice: "24.99",
-                        id: "11",
-                        category: "Tops",
-                    },
-                    {
-                        name: "Otter Brown Plushie",
-                        pImg: "product-12.png",
-                        oldPrice: "20.79",
-                        newPrice: "12.99",
-                        id: "12",
-                        category: "Plushies",
-                    },
-                ]
-                pCards.forEach(pCards => {
-                    document.write(
-                        `
-                        <div data-aos="zoom-out-down" data-aos-duration="2000" data-aos-offset="200" class="product-card" data-category="${pCards.category}">
-                            <div class="img-container">
-                                <img src="Assets/images/products/${pCards.pImg}" alt="${pCards.name}">
-                                <div class="wishlist-icon">
-                                    <i class="bi bi-suit-heart" data-tooltip="Add to Wishlist" data-product-id="${pCards.id}"></i>
-                                </div>
-                                <div class="overlay">
-                                    <div class="quick-buttons">
-                                        <i class="bi bi-eye" data-tooltip="Quick View"></i>
-                                        <i class="bi bi-suit-heart" data-tooltip="Add to Wishlist" data-product-id="${pCards.id}"></i>
-                                        <i class="bi bi-bag" data-tooltip="Add to Cart" data-product-id="${pCards.id}"></i>
-                                    </div>
-                                    <a href="productlink"><button>View Product</button></a>
-                                </div>
-                            </div>
-                            <h3>${pCards.name}</h3>
-                            <div class="product-price">
-                                <p class="n-price">$${pCards.newPrice}</p>
-                                <p class="o-price">$${pCards.oldPrice}</p>
-                            </div>
-                        </div>
-                        `
-                    )
-                });
-            </script>
+        <div class="products"></div>
+    </section>
+    <section class="men-women">
+        <div class="mycontainer">
+            <div class="men-promo promo">
+                <img src="Assets/images/men.png" alt="Men">
+                <div class="promo-text">
+                    <h1>Men's Collection</h1>
+                    <h2>"Fierce Fits for the Bold."</h2>
+                    <a href="">View Collection</a>
+                </div>
+            </div>
+            <div class="women-promo promo">
+                <img src="Assets/images/women.png" alt="Men">
+                <div class="promo-text">
+                    <h1>Women's Collection</h1>
+                    <h2>"Effortlessly Chic, Fiercely You."</h2>
+                    <a href="">View Collection</a>
+                </div>
+            </div>
         </div>
     </section>
+    <section class="best products-display">
+        <h1>Best Selling Products</h1>
+        <h2>Here are our new arrival products that you may like.</h2>
+        <div class="products"></div>
+    </section>
+    <footer>
+        <div class="footer-col">
+            <div class="logo">
+                <img src="Assets/images/otter logo.png" alt="">
+                <h1>OTTERLY <sup>&trade;</sup></h1>
+            </div>
+            <p>Unapologetic style, premium quality, and fierce energy in every piece. Wear the flow. Own the moment.</p>
+            <div class="social-media">
+                <a href=""><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-twitter-x"></i></a>
+                <a href=""><i class="bi bi-instagram"></i></a>
+                <a href=""><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h1>Categories</h1>
+            <ul>
+                <a href=""><li>Men</li></a>
+                <a href=""><li>Women</li></a>
+                <a href=""><li>Shoes</li></a>
+                <a href=""><li>Jewelry</li></a>
+                <a href=""><li>Plushies</li></a>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h1>Sitemap</h1>
+            <ul>
+                <a href=""><li>Home</li></a>
+                <a href=""><li>Shop</li></a>
+                <a href=""><li>Contact Us</li></a>
+                <a href=""><li>FAQ's</li></a>
+                <a href=""><li>About Us</li></a>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h1>Newsletter</h1>
+            <p>Subscribe to our newsletter and get 10% off your first purchase.</p>
+            <form action="">
+                <input type="email" placeholder="Your Email Address">
+                <button>Subscribe</button>
+            </form>
+        </div>
+    </footer>
+    <div class="meta-footer">
+        <p>Copyright 2023 Otterly. All rights reserved.</p>
+    </div>
     <!-- Own -->
+    <script src="Assets/js/product.js"></script>
     <script src="Assets/js/script.js"></script>
     <script src="Assets/js/navbar.js"></script>
     <!-- AOS -->

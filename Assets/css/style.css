@@ -12,11 +12,6 @@
     --alert: #FF6B6B;
 }
 
-*::selection {
-    background-color: var(--primary);
-    color: var(--secondary);
-}
-
 body {
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -625,15 +620,19 @@ section.products-display .products {
     height: 150%;
     width: 110%;
 }
-section.popular h1{
+
+section.popular h1 {
     text-align: center;
 }
+
 section.popular h1::before {
     left: 25%;
 }
+
 section.popular h1::after {
     right: 25%;
 }
+
 .popular-filter {
     width: 100vw;
     height: fit-content;
@@ -642,6 +641,7 @@ section.popular h1::after {
     align-items: center;
     margin-top: 20px;
 }
+
 .popular-filter ul {
     display: flex;
     flex-direction: row;
@@ -650,22 +650,139 @@ section.popular h1::after {
     gap: 30px;
     width: 100%;
 }
+
 .popular-filter ul li {
     list-style: none;
     cursor: pointer;
     font-size: 1.4em;
     transition: all 0.5s ease-in-out;
 }
+
 .popular-filter ul li:hover {
     opacity: 0.5;
 }
+
 .popular-filter ul li.active {
     color: var(--primary);
     font-weight: 600;
 }
-script {
-    display: none;
+
+section.men-women {
+    padding: 40px;
+    width: 100vw;
 }
+
+section.men-women .mycontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+section.men-women .mycontainer .promo {
+    height: 500px;
+    width: 48%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+section.men-women .mycontainer .men-promo img {
+    height: 160%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: -200px;
+}
+
+section.men-women .mycontainer .men-promo {
+    background-color: var(--primary);
+}
+
+section.men-women .mycontainer .women-promo {
+    background-color: var(--details);
+}
+
+section.men-women .mycontainer .promo .promo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    width: 70%;
+    height: 100%;
+    position: absolute;
+}
+
+section.men-women .mycontainer .men-promo .promo-text {
+    right: -50px;
+    bottom: 50px;
+}
+
+section.men-women .mycontainer .promo .promo-text h1 {
+    opacity: 1;
+    position: static;
+    font-size: 5em;
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 500;
+    position: absolute;
+}
+
+section.men-women .mycontainer .men-promo .promo-text h1 {
+    top: 90px;
+    left: 10px;
+}
+
+section.men-women .mycontainer .promo .promo-text h2 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-family: "Titillium Web", sans-serif;
+}
+
+section.men-women .mycontainer .promo .promo-text a {
+    background-color: var(--secondary);
+    text-decoration: none;
+}
+
+section.men-women .mycontainer .men-promo .promo-text a {
+    color: var(--primary);
+}
+
+section.men-women .mycontainer .women-promo .promo-text a {
+    color: var(--details);
+}
+
+section.men-women .mycontainer .women-promo img {
+    height: 160%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    right: -100px;
+    top: -50px;
+}
+
+section.men-women .mycontainer .women-promo .promo-text h1 {
+    top: 100px;
+    left: 10px;
+}
+
+section.men-women .mycontainer .women-promo .promo-text {
+    bottom: 50px;
+}
+
+section.best h1 {
+    text-align: center;
+}
+
+section.best h1::before {
+    left: 22%;
+}
+
+section.best h1::after {
+    right: 22%;
+}
+
 
 @media (max-width: 1000px) {
     .hero {
@@ -775,36 +892,68 @@ script {
         gap: 20px;
         border-radius: 0;
     }
+
     .promo-img {
         border-radius: 5px;
     }
+
     .promo-text {
         gap: 50px;
     }
+
     .promo-text h1 {
         opacity: 0.1;
         left: 8%;
         top: 1%;
     }
+
     .promo-text a {
         background-color: var(--secondary);
         color: var(--details);
         padding: 0 10px;
         border-radius: 5px;
     }
+
     .promo-text p {
         background-color: var(--primary);
         color: var(--secondary);
         padding: 0 10px;
         border-radius: 5px;
     }
+
     .popular-filter ul {
         flex-wrap: wrap;
     }
+
     .popular-filter ul li {
         width: 40%;
         text-align: center;
         font-size: 1em;
+    }
+
+    section.men-women .mycontainer {
+        flex-direction: column;
+    }
+
+    section.men-women .mycontainer .promo {
+        width: 100%;
+    }
+
+    section.men-women .mycontainer .promo .promo-text {
+        width: 100%;
+        position: relative;
+        gap: 20px;
+    }
+
+    section.men-women .mycontainer .promo .promo-text h1 {
+        position: static;
+        font-size: 4em;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    section.men-women .mycontainer .men-promo .promo-text {
+        right: 0;
     }
 }
 
