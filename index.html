@@ -57,10 +57,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="cart.html" class="cart-icon">
+                    <span class="cart-icon cart-icon-popup">
                         <i class="bi bi-bag"></i>
                         <span class="item-count cart-count">0</span>
-                    </a>
+                    </span>
                 </li>
                 <li><a href="user.html" class="login-signup">Login/Sign Up</a></li>
             </ul>
@@ -73,6 +73,12 @@
                 </div>
                 <ul class="cart-login">
                     <li><a href="user.html" class="login-signup"><i class="bi bi-person"></i></a></li>
+                    <li>
+                        <span class="cart-icon cart-icon-popup">
+                            <i class="bi bi-bag"></i>
+                            <span class="item-count cart-count">0</span>
+                        </span>
+                    </li>
                     <li class="hamburger-menu">
                         <div class="hamburger-bar"></div>
                         <div class="hamburger-bar"></div>
@@ -231,21 +237,41 @@
         <div class="footer-col">
             <h1>Categories</h1>
             <ul>
-                <a href=""><li>Men</li></a>
-                <a href=""><li>Women</li></a>
-                <a href=""><li>Shoes</li></a>
-                <a href=""><li>Jewelry</li></a>
-                <a href=""><li>Plushies</li></a>
+                <a href="">
+                    <li>Men</li>
+                </a>
+                <a href="">
+                    <li>Women</li>
+                </a>
+                <a href="">
+                    <li>Shoes</li>
+                </a>
+                <a href="">
+                    <li>Jewelry</li>
+                </a>
+                <a href="">
+                    <li>Plushies</li>
+                </a>
             </ul>
         </div>
         <div class="footer-col">
             <h1>Sitemap</h1>
             <ul>
-                <a href=""><li>Home</li></a>
-                <a href=""><li>Shop</li></a>
-                <a href=""><li>Contact Us</li></a>
-                <a href=""><li>FAQ's</li></a>
-                <a href=""><li>About Us</li></a>
+                <a href="">
+                    <li>Home</li>
+                </a>
+                <a href="">
+                    <li>Shop</li>
+                </a>
+                <a href="">
+                    <li>Contact Us</li>
+                </a>
+                <a href="">
+                    <li>FAQ's</li>
+                </a>
+                <a href="">
+                    <li>About Us</li>
+                </a>
             </ul>
         </div>
         <div class="footer-col">
@@ -259,6 +285,43 @@
     </footer>
     <div class="meta-footer">
         <p>Copyright 2023 Otterly. All rights reserved.</p>
+    </div>
+    <div class="quick-cart">
+        <span class="close-cart"><i class="bi bi-x-lg"></i></span>
+        <div class="cart-items-container">
+            <!-- Cart items will be dynamically added here -->
+            <div class="empty-cart-message">Your cart is empty</div>
+        </div>
+        <div class="cart-options">
+            <span><p>Subtotal:</p><p class="total-price">$0.00</p></span>
+            <a href="checkout.html">Checkout</a>
+            <a href="cart.html">View Cart</a>
+        </div>
+    </div>
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="product-image-container">
+                    <img id="modalProductImage" src="/placeholder.svg" alt="Product Image">
+                </div>
+                <div class="product-details">
+                    <h2 id="modalProductName"></h2>
+                    <div class="product-rating" id="modalProductRating"></div>
+                    <p id="modalProductDescription"></p>
+                    <div class="product-price">
+                        <p class="n-price" id="modalProductPrice"></p>
+                        <p class="o-price" id="modalProductOldPrice"></p>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="quantity-btn" id="decrementQuantity">-</button>
+                        <span id="productQuantity">1</span>
+                        <button class="quantity-btn" id="incrementQuantity">+</button>
+                    </div>
+                    <button class="add-to-cart-btn" id="modalAddToCart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Own -->
     <script src="Assets/js/product.js"></script>
